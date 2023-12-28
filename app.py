@@ -9,7 +9,7 @@ def create_fading_swirl(ax, start_deg, end_deg, color):
     x = r * np.cos(theta) + 0.5
     y = r * np.sin(theta) + 0.5
     
-    ax.plot(x, y, color=color, linewidth=2)
+    ax.plot(x, y, color=color, linewidth=1.0)
 
 def create_dense_fading_swirl(ax, start_deg, end_deg, color, step=1):
     for offset in range(0, 120, step):
@@ -17,16 +17,16 @@ def create_dense_fading_swirl(ax, start_deg, end_deg, color, step=1):
 
 fig, ax = plt.subplots()
 
-create_dense_fading_swirl(ax, 90, 210, 'green')
-create_dense_fading_swirl(ax, 210, 330, 'red')
-create_dense_fading_swirl(ax, 330, 450, 'blue')
+create_dense_fading_swirl(ax, 92, 212, 'green')
+create_dense_fading_swirl(ax, 212, 332, 'red')
+create_dense_fading_swirl(ax, 332, 452, 'blue')
 
 # set aspect of the plot to be equal and remove axes
 ax.set_aspect('equal', adjustable='box')
 plt.axis('off')
 
 # black circle around the outer extremes of the spiral
-circle = plt.Circle((0.5, 0.5), 0.403, color='black', fill=False, linewidth=1.0, zorder=3)
+circle = plt.Circle((0.5, 0.5), 0.401, color='black', fill=False, linewidth=1.0, zorder=3)
 ax.add_artist(circle)
 
 # set limits for x and y axes
