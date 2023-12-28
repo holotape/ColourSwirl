@@ -35,6 +35,8 @@ ax.set_ylim(0.05, 0.95)
 
 # Save the plot as a PNG file
 plt.savefig('swirl_pattern.png', dpi=300)
+plt.savefig('swirl_pattern.svg', format='svg')
+
 
 # Show the plot
 plt.show()
